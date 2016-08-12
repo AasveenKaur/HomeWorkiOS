@@ -95,7 +95,7 @@ extension ViewController:UITextFieldDelegate{
 
 extension ViewController{
     func addRow()  {
-        messageList.addObject(enterMessageField.text!)
+        messageList.addObject("\"\(enterMessageField.text!)\"")
         tableView.beginUpdates()
         tableView.insertRowsAtIndexPaths([
             NSIndexPath(forRow: messageList.count-1, inSection: 0)
